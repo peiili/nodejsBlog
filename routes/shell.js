@@ -12,6 +12,8 @@ router.all("/push",function(req,res,next){
   }
   // shell.exec("git fetch");
   // shell.exec("git pull");
+  console.log(req.body);
+  
   const data={
     message:'pull OK'
   }
