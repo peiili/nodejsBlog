@@ -17,8 +17,8 @@ router.all("/push",function(req,res,next){
     shell.echo('Error: Git commit failed');
     shell.exit(1);
   }
-  // shell.exec("git push");
-  res.status(200).send("");
+  shell.exec("git push");
+  res.send("fwe");
   // next();
   shell.config.reset(); 
 })
