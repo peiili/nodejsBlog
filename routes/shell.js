@@ -9,9 +9,11 @@ router.all("/push",function(req,res,next){
     shell.echo('Sorry, this script requires git');
     shell.exit(1);
   }
-  shell.exec("git fetch");
-  shell.exec("git pull");
-  shell.exec("cnpm install",{async:true});
+  console.log(req.body);
+  
+  // shell.exec("git fetch");
+  // shell.exec("git pull");
+  // shell.exec("cnpm install",{async:true});
 
   
   const data={
