@@ -15,7 +15,7 @@ router.all("/push",function(req,res,next){
     }    
     shell.exec("git fetch");
     shell.exec("git pull");
-    shell.exec("cnpm install",{async:true});
+    shell.exec("npm install",{async:true});
     console.log("master pull OK");
     const data={
       message:'pull OK'
