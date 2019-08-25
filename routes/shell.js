@@ -4,6 +4,15 @@ const router = express.Router();
 
 shell.cd(__dirname);
 shell.cd("../")
+
+// 判断，如果是mater分支更新，就自动拉取新代码
+/**
+ * TODO 
+ * 自动化部署，之后需要迁出项目本身，首先进行删包，再进行安装重启,
+ * 存储commit内容
+ */
+
+
 router.all("/push",function(req,res,next){  
   
   console.log(req.body.ref);
